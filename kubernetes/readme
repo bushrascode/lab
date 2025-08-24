@@ -2,4 +2,15 @@ We are using rancher?
 You can’t run Kubernetes directly on macOS, so Rancher gives you a Linux VM and manages Kubernetes for you inside it
 
 What are Kubernetes Pods?
+History - originally ppl worked with virtual machines and each machine would run their application -- then docker came about and it was great bcs when you containerise an application you dont really need an entire operating system, so rather than having lots of vms for each application, well now you had a large vm that had all your containerised applications. This was great bcs we were able to manage less virtual machines. Say we had a ubuntu virtual machine, the containerised application would share the compute capacity of this one ubuntu machine. 
 
+But what if we wanted to have replica of our applications?
+So instead there were multiple vms that have copies of these containers and ppl would use Ansible and send yaml playbooks to be like run this docker xyz. Only issue is that the containers in vm1 has no information on the container in vm2 or vm3. For this traffic to be managed they traditionally had a HA Proxy that acted as a load balancer to distribute the requests from the user amongst the containers in the different vms. This involved a lot of manual work and thats why Kubernetes came in. 
+
+Kubernetes is the operating system of the cloud 
+Kubernetes is basically a bunch of virtual machines who are able to communicate with eachother properly and to divide their workload 
+
+In Kubernetes we have the control plane - the control plane takes our requests (written in yaml such as hey i want 3 replicas of this image). The control plane is like cool, i have all these worker nodes, now where do i have enough capacity to do this? This is really key bcs with Ansible we needed to figure out which vm had capacity, whereas with Kubernetes the Control Plane does this for you.
+Adds more nodes to deal with capacity requirements 
+
+Kubernetes is an intelligent way of running container workloads at scale 
