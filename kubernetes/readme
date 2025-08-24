@@ -14,3 +14,25 @@ In Kubernetes we have the control plane - the control plane takes our requests (
 Adds more nodes to deal with capacity requirements 
 
 Kubernetes is an intelligent way of running container workloads at scale 
+
+Namespace is just a way of logically seperating resources in a cluster
+When you run kubectl command, its the control plane that handles that request for you 
+
+The Control Plane contains: 
+scheduler (is responsible for taking our requests and assigning them to a node)
+etcd
+api server (our commands are sent to the control plane)
+
+
+pods vs nodes
+a pod usually contains 1 container (sometimes more), has its own:
+networking (gets its own IP address).
+storage volumes.
+metadata (labels, configs).
+
+a worker wode is the machine (vm) that actually runs your pods, each worker node has:
+kubelet (the agent that talks to the Kubernetes control plane).
+container runtime (Docker, containerd, etc., that actually runs your containers).
+kube-proxy (handles networking for Pods).
+
+Something you define in kubernetes is called manifest 
