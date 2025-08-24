@@ -1,0 +1,5 @@
+We are using rancher?
+You can’t run Kubernetes directly on macOS, so Rancher gives you a Linux VM and manages Kubernetes for you inside it
+
+What are Kubernetes Pods?
+
