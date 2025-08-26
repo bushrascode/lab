@@ -12,3 +12,6 @@ linux
     - debian 
     - etc
 - linux is the widely used operating system for servers 
+
+To connect to ec2 vm -- https://stackoverflow.com/questions/29933918/ssh-key-permissions-0644-for-id-rsa-pub-are-too-open-on-mac
+chmod 400 ~/.ssh/Key_file
