@@ -18,3 +18,13 @@ chmod 400 ~/.ssh/Key_file
 
 sudo su - (to get to root user - user with administrative rights)
 ls / - (lists directories)
+
+Linux file system hierarchy 
+/ -------- top level directory for all directories (often called root directory)
+/root ---- (is the root users home directory)
+pwd ----- where am i right now? (present working directory) - root is the administrative user 
+/home ----- it is home directory for other users, provides working environment for all users bar the root user
+/usr ------ this is by default where softwares are installed
+/bin -------- contains commands used by all users (binary file)
+/sbin ------- contains commands used only by super user (aka root user)
+/var --------contains variable data 
