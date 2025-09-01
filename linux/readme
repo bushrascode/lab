@@ -49,3 +49,9 @@ more ------ view file content page by page
 head ----- view first 10 lines of file content
 tail ----- view last 10 lines of file content
 page --- view file content page by page
+
+Create and delete file/directory 
+ls -l (flag for long list)
+ls -l -t (flat for timestamp)
+ls -l -t -r (just reverses whatever you were going to display)
+ls -ltr (this is also valid)
