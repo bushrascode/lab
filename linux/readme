@@ -51,7 +51,8 @@ tail ----- view last 10 lines of file content
 page --- view file content page by page
 
 Create and delete file/directory 
-ls -l (flag for long list)
+ls -l (flag for long list, - is for files and d is for directory)
+ll -- shorthand for above command
 ls -l -t (flat for timestamp)
 ls -l -t -r (just reverses whatever you were going to display)
 ls -ltr (this is also valid -- useful for when trying to find out which files got recently updated)
@@ -61,6 +62,10 @@ In linux we have a couple of editors to create files
 nano - create a filename 
 vim - vi fileName 
 rm - remove a file
-mkdir - create a directory
-rmdir - remove a directory
+mkdir - create a directory 
+rmdir - remove a directory that is not empty
 rm -rf --- remove a directory 
+rm -f (flag stands for force)
+tree --- tells you your directory structure 
+rmdir ---- only removed EMPTY directories
+rm -rf * ---- be careful there is no recycling bin exists in linux 
