@@ -40,3 +40,12 @@ users / id ---- shows user information
 man command ---- shows manual of command
 username ---- shows your user name
 who / w ----- display who is online
+
+Linux view files commands
+ls ----- directory listings
+cat filename ----- view file content
+less ----- view file content page by page 
+more ------ view file content page by page
+head ----- view first 10 lines of file content
+tail ----- view last 10 lines of file content
+page --- view file content page by page
