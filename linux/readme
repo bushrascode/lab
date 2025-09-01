@@ -28,3 +28,15 @@ pwd ----- where am i right now? (present working directory) - root is the admini
 /bin -------- contains commands used by all users (binary file)
 /sbin ------- contains commands used only by super user (aka root user)
 /var --------contains variable data 
+
+
+Linux basic commands
+date --- show the current date and time
+cal ---  show this month's calendar
+uptime ---- show current uptime
+whoami ----- who you are logged in as
+finger ----- display information about user
+users / id ---- shows user information
+man command ---- shows manual of command
+username ---- shows your user name
+who / w ----- display who is online
