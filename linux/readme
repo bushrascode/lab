@@ -55,7 +55,8 @@ ls -l (flag for long list)
 ls -l -t (flat for timestamp)
 ls -l -t -r (just reverses whatever you were going to display)
 ls -ltr (this is also valid -- useful for when trying to find out which files got recently updated)
-cat > filename ---- to create a file and have write capabilities (control + c to exit)
+cat > filename ---- (CAREFUL IT CAN OVERWRITE) to create a file and have write capabilities (control + c to exit)
+cat >> filename --- adds content to existing file
 In linux we have a couple of editors to create files 
 nano - create a filename 
 vim - vi fileName 
