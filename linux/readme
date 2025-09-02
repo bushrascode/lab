@@ -81,7 +81,11 @@ find / -group --- for files belonging to a particular group
 
 file --- to find out what kind of file it is 
 
-grep --- search for a pattern in a file 
+grep --- used to pick out the required expression from the file and print the output (REMEMBER IT IS CASE SENSITIVE so use flag -i aka ignore)
+Remember grep only works on FILES so use | ls -l | grep, here ls -l is treated as a file
+grep ^t --- will find everything that starts with t
+
+
 cd --- switch between directories 
 cd .. -- to get to parent directory 
 cd / --- regardless of where i am i wanna go to x file or directory - so cd /root/dir1 or cd ../tmp/dir1
