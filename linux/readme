@@ -85,6 +85,11 @@ grep --- used to pick out the required expression from the file and print the ou
 Remember grep only works on FILES so use | ls -l | grep, here ls -l is treated as a file
 grep ^t --- will find everything that starts with t
 
+sed command -- used to search for a word in the file and replace it with the word required to be in the output
+note -- sed command will only modify the output but there will be no change in the original file
+
+exmaples
+sed 's/old_text/new_text/' file name
 
 cd --- switch between directories 
 cd .. -- to get to parent directory 
