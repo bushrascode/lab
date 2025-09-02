@@ -76,7 +76,9 @@ c -- copy a file -- cp file1(source file) file2 --- cant copy directories need t
 mv -- move a file + rename file and get copied content (popular question in interviews)
 find --- find a file 
 grep --- search for a pattern in a file 
-cd --- switch between directories
+cd --- switch between directories 
+cd .. -- to get to parent directory 
+cd / --- regardless of where i am i wanna go to x file or directory - so cd /root/dir1 or cd ../tmp/dir1
 diff --- find content diff in 2 files 
 sed --- search and replace paticular pattern
 chmod --- change file permissions 
