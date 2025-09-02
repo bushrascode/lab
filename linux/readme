@@ -74,7 +74,13 @@ rm -rf * ---- be careful there is no recycling bin exists in linux
 Managing Files and Directories 
 c -- copy a file -- cp file1(source file) file2 --- cant copy directories need to use -r
 mv -- move a file + rename file and get copied content (popular question in interviews)
-find --- find a file 
+find --- find a file or directory path 
+find / -name --- for searching a file with its name
+find / -user ---- for files whose owner is a particular user 
+find / -group --- for files belonging to a particular group
+
+file --- to find out what kind of file it is 
+
 grep --- search for a pattern in a file 
 cd --- switch between directories 
 cd .. -- to get to parent directory 
