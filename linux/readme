@@ -59,6 +59,7 @@ ls -ltr (this is also valid -- useful for when trying to find out which files go
 cat > filename ---- (CAREFUL IT CAN OVERWRITE) to create a file and have write capabilities (control + c to exit)
 cat >> filename --- adds content to existing file
 In linux we have a couple of editors to create files 
+touch fileName -- create a filename
 nano - create a filename 
 vim - vi fileName 
 rm - remove a file
@@ -69,3 +70,15 @@ rm -f (flag stands for force)
 tree --- tells you your directory structure 
 rmdir ---- only removed EMPTY directories
 rm -rf * ---- be careful there is no recycling bin exists in linux 
+
+Managing Files and Directories 
+c -- copy a file -- cp file1(source file) file2 --- cant copy directories need to use -r
+mv -- move a file 
+find --- find a file 
+grep --- search for a pattern in a file 
+cd --- switch between directories
+diff --- find content diff in 2 files 
+sed --- search and replace paticular pattern
+chmod --- change file permissions 
+chown --- change file ownership 
+file -- show what kind of file it is 
