@@ -12,4 +12,11 @@ Worker Node
 when the pod is executed using kubernetes components, api server persists that information onto etcd 
 kubernetes pods are maintained by replica set controller, these such controllers are managed by controller manager
 
-How various components of kubernetes interact when you run kubectl apply (pod)?
+How various components of kubernetes interact ? (when you run kubectl apply pod)
+1) kubectl request is set to control plane api server which validates + authenticates the request 
+2) api server forwards request to schedular, which identifies which node is right for the pod 
+3) api server then sends the request to the kubelet of whatever node the schedular selected
+4) kubelet invokes container runtime which is needed to run the container and this is how your pod is run on the kubernetes cluster
+5) once pod is running api server updates that info to the etcd (it persists the object to etcd)
+6) replicaset controller which takes care of the pod in case it goes down, this controller is managed by controller manager in control plane
+
