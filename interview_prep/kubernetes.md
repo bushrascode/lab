@@ -29,3 +29,12 @@ service acts as the middleman as it never gets terminated
 
 services can also help with default load balancing when there are multiple replicas of a pod, when requests are sent to service, 
 service ensures requests are split between multiple replicas of the pod 
+
+--Why is hardcoding Pod IP communication is a bad practice?
+pods are ephemeral in nature, they can go down and when this happens the ip address can change
+hardcoding it will lead to 502 bad gateway error if the pod goes down
+to avoid this, kubernetes uses a component called services which performs service discovery
+service depends on labels and selectors not ip address to communicate to pods
+service ensures communication is sent to podB even when it crashes and gets replaced
+so requests from podA is always reaching podB
+
