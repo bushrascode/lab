@@ -38,3 +38,41 @@ service depends on labels and selectors not ip address to communicate to pods
 service ensures communication is sent to podB even when it crashes and gets replaced
 so requests from podA is always reaching podB
 
+-- what are the types of services in kubernetes?
+there are many types of services and the type typically defines the scope of access of your kubernetes service 
+service types:
+cluster ip, the kubernetes service can only be accessed within the kubernetes cluster (so any pod inside a cluster irrespective of namespace)
+What it does: Exposes the Service only inside the cluster.
+Use case: Internal communication between microservices. For example, your frontend talks to your backend using a ClusterIP service.
+IP scope: Only reachable from within the Kubernetes cluster.
+🔹 2. NodePort
+
+What it does: Exposes the Service on a static port on every node’s IP.
+
+Use case: You want external traffic to access your cluster, but in a simple way (not production-grade usually). Good for dev/test or quick demos.
+
+How it works: Kubernetes opens a port (default range: 30000–32767) on every Node, and traffic hitting <NodeIP>:<NodePort> gets forwarded to the pods.
+
+🔹 3. LoadBalancer
+
+What it does: Integrates with your cloud provider (AWS ELB, GCP Load Balancer, Azure LB, etc.) to provision a real external load balancer.
+
+Use case: Production services that need to be accessed from the internet.
+
+How it works: Traffic comes into the cloud load balancer → NodePort → ClusterIP → Pods. (So it kind of stacks on top of the previous types).
+
+🔹 4. ExternalName
+
+What it does: Maps a Service to an external DNS name instead of pods.
+
+Use case: When you want services in your cluster to use an external resource (like mydb.example.com) but still reference it as if it were a native Kubernetes Service.
+
+How it works: It returns a CNAME record pointing to the external hostname.
+
+🔹 5. Headless Service (special case)
+
+What it does: A Service without a ClusterIP (clusterIP: None).
+
+Use case: When you want to do direct service discovery of individual pods (e.g., StatefulSets like databases, where each pod should be individually addressable).
+
+How it works: Instead of giving you one virtual IP, DNS will return the IPs of the actual pods.
